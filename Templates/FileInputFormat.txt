@@ -1,0 +1,15 @@
+int(command)
+string(s) (valid recipient email addresses, 8-30 characters, no invalid characters)
+--- up until here is common for every template
+
+Grade Notification Extra Information:
+string (assignment name, 2-20 characters)
+double (grade, ex: 80, 98.5)
+
+Missing Assignment:
+string (assignment name, 2-20 characters)
+string (due date, format MM/DD at HH:MM)
+
+Class Reminder:
+string (class data, format MM/DD at HH:MM)
+
