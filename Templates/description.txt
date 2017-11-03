@@ -21,3 +21,7 @@ More commands can be added to this list though it is not programmatically effici
 I could have used dynamic allocation to have an ArrayList of commands, each of which can be accessed using an index rather than 
 having a long list of 'if' statements. Since for this specific project, we only need a few commands, it was simpler to hardcode
 these commands in.
+
+
+
+See FileInputFormat.txt for complete decription of how input data should be formatted as files into our program.
