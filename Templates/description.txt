@@ -1,0 +1,23 @@
+In order to create an email using a template to send to our students, we need to first specify what data we require from
+the front-end team. The web developers will implement a form on different pages to collect relevant information (for
+example, the email address of a student we want to email, the grade they got, etc.) and pass in this data to us using a
+text file (.txt). 
+
+The first useful element of this text file (let's call it InputTextFile.txt) is an integer which represents
+the type of message we should send (notifying student of their grade, reminding them when an assignment is due, etc.). At
+this point, the Runner class' main method will make a decision on which template file to use as a reference when checking
+if the rest of the information in InputTextFile.txt is valid. For example, let's say I want to notify a student of their grade
+once it has been corrected, I will pass in a '0' as the first element of InputTextFile.txt and then I have to say what the
+student's email was in the next element and then what the grade was. Whereas if I wanted to remind a student of an assignment
+deadline, this requires a completely different set of information. The templates indicate what information is required for
+each different type of message we want to send. Main looks at the first integer and then validates the rest of the information
+we pass in with InputTextFile.txt based on the template for that command.
+
+Design: '0' = Grade notification  '1' = Missing assignment  '2' = Event/class reminder
+
+<Insert IF CODE SNIPPET>
+
+More commands can be added to this list though it is not programmatically efficient to write another 'if' statement every time. 
+I could have used dynamic allocation to have an ArrayList of commands, each of which can be accessed using an index rather than 
+having a long list of 'if' statements. Since for this specific project, we only need a few commands, it was simpler to hardcode
+these commands in.
