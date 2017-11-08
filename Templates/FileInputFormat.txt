@@ -1,4 +1,3 @@
-int(command)
 string(s) (valid recipient email addresses, 8-30 characters, no invalid characters)
 --- up until here is common for every template
 
