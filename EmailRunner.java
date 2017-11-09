@@ -30,14 +30,8 @@ public class EmailRunner {
 		
 		if(command.equals("N1"))
 		{
-			validData = validate1();
+			validData = tempValid.validate1();
 		}
 			
-		
-		
-		
 	}
-
-
-
 }
