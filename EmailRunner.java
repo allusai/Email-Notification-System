@@ -34,6 +34,23 @@ public class EmailRunner {
 			System.out.println("Inside N1 validation");
 			validData = tempValid.validate1();
 		}
+		
+		else if(command.equals("N2"))
+		{
+			System.out.println("Inside N2 validation");
+			validData = tempValid.validate2();
+		}
+		
+		else if(command.equals("N3"))
+		{
+			System.out.println("Inside N3 validation");
+			validData = tempValid.validate3();
+		}
+		
+		else
+		{
+			System.out.println("Unrecognized command/file name");
+		}
 
 	}
 }
