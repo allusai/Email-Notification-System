@@ -114,9 +114,41 @@ public class TemplateValidation {
 	/** Checks if the data in thisFile is what we need to send Notification3.
 	*
 	* @return boolean  Whether all the data is valid 
+	 * @throws FileNotFoundException 
 	*/
-	boolean validate3()
+	boolean validate3() throws FileNotFoundException
 	{
+		Scanner fileScanner = new Scanner(thisFile);
+		
+		//If the email is not valid, return false
+		if(!validateEmail())
+			return false;
+		
+		//Note that we can jump over the first line inside this method (document)
+		fileScanner.nextLine();
+		
+		/* The next line should be a string between 2 and 40 characters */
+		String secondLine = fileScanner.nextLine();
+		
+		if(secondLine.length() < 2 || secondLine.length() > 40)
+			return false;
+			
+		/* The next line should be a MM/DD */
+		String thirdLine = fileScanner.nextLine();
+		boolean validDate = isValidDate(thirdLine); //See below
+		
+		if(!validDate)
+			return false;
+		
+		/* The next line should be a valid time like 8:30PM */
+		String fourthLine = fileScanner.nextLine();
+		boolean validTime = isValidTime(fourthLine); //See helper method below
+		
+		if(!validTime)
+			return false;
+		
+			
+		//If we did all the checks and there is no problem, the file is valid
 		return true;
 	}
 	
@@ -182,8 +214,4 @@ public class TemplateValidation {
 		
 		return true;
 	}
-	
-	
-	
-	
 }
