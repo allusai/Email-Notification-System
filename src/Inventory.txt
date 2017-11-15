@@ -1,0 +1,7 @@
+EmailRunner.java (contains main method)
+MessageCreator.java (takes the file data and creates a nicely formatted email message to be sent)
+PropertiesCreator.java (creates the properties file which is the configuration)
+SendEmail.java (sends the email itself through Gmail)
+SendMailTLS.java (test file to send the email)
+TemplateValidation.java (contains all of the methods to verify data from files)
+TemplateValidationRunner.java (unit tests of all of the TemplateValidation methods)
