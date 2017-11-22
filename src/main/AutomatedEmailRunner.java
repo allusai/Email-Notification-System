@@ -36,6 +36,7 @@ public class AutomatedEmailRunner {
 		
 		long startTime = System.currentTimeMillis();
 		
+	while(true) {
 	    for (File inputFile : directoryListing) 
 	    {
 	    	if(inputFile == null)
@@ -162,5 +163,6 @@ public class AutomatedEmailRunner {
 		
 		    }
 	    }  
+	}
 	}
 }
