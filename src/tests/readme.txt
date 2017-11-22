@@ -4,3 +4,4 @@ These files test each individual component of the larger "AutomatedEmailRunner.j
    is added to the directory by the user.
 3) The program will moved processed files into a separate directory where the data can be stored for a certain amount of
    time and then as a security measure to protect private data they can be deleted.
+4) The program will use an external library (the JavaMail API) to send the email.
