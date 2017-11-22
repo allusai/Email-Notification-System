@@ -22,10 +22,6 @@ public class AutomatedEmailRunner {
 			System.out.println("Properties object could not be created");
 			return;
 		}
-
-		
-		long startTime = System.currentTimeMillis();
-		
 		
 		while(true) {
 			
@@ -40,15 +36,7 @@ public class AutomatedEmailRunner {
 				return;
 			}
 			
-			System.out.println("Top of the while loop");
-			
-			//Print out files in directory
-			for (File inputFile : directoryListing)
-			{
-				String fileName = inputFile.getName();
-				System.out.println(fileName);
-			}
-				
+			//System.out.println("Top of the while loop");
 			
 			for (File inputFile : directoryListing) 
 			{
@@ -63,9 +51,6 @@ public class AutomatedEmailRunner {
 					System.out.println("Exit file found.");
 					return;
 				}
-				
-				if(!inputFile.exists())
-					continue;
 		    
 				//Only process the files which have not been modified in
 				//the past two minutes as they might be in the process of
