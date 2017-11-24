@@ -130,8 +130,10 @@ public class AutomatedEmailRunner {
 			 * a lot of computing power. We only scan through the directory and check for
 			 * new files every 5 seconds. To build this functionality, we have to use the
 			 * Thread class which can put a thread to sleep for a given amount of time in milliseconds. */
+			long sleepTime = Long.parseLong(p.getProperty("sleeptime"));
+			
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(sleepTime);
 			} catch (InterruptedException e) {
 				System.out.println("Sleep command did not work");
 			}
