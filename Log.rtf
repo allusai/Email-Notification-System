@@ -1,48 +1,40 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+1.0
+Did unit testing on the TemplateValidation class’ methods
+Found some bugs which I fixed and one is unresolved
 
-\f0\fs24 \cf0 1.0\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 Did unit testing on the TemplateValidation class\'92 methods\
-Found some bugs which I fixed and one is unresolved\
-\
-1.1\
-Worked on the configuration files and learned why we needed them (similar to global variables, provides portability)\
-Designed the method to create a Properties object in Java and set directoryPath, template1, template2, and template3 commands\
-Found a bug where if the file only had 2/3 things that were necessary, the Scanner would try and keep reading and crash. Added if hasNextToken() to fix that bug.\
-\
-1.2\
-Today, I worked on the JavaMail API. I had to learn how to download a jar file (mail.jar) and connect it to the Java Project in Eclipse (using external libraries). \
-I tested the API by sending a message to myself.\
-Then I realized I verified the data, but what I needed to send to the user wasn\'92t that file\'92s raw data but a formatted message. So I made a class to do that formatting (creating an actual, readable email).\
-Then, I created the class to send the email once the data has been verified and formatted into a message. I sent an email to show that this works.\
-\
-1.3\
-I still need to clean up the code a little bit, my EmailRunner.java is too long. The if hasNextToken() statements don\'92t really look that neat, the methods like validate1() aren\'92t very modular (short).\
-\
-1.4\
-Fixed a formatting issue in the Template files that made the email sent have random extra spaces\
-Re-organized code from main with creating and setting the values of a property file into PropertyCreator.java\
-Added code to create the email messages for Notification 2 and 3 in MessageCreator.java\
-Tested sending emails for all three of the notifications, and it worked!\
-\
-1.5 \
-I realized that my code only works because PropertyCreator build the property object, I\'92m not reading in the configuration file\'92s properties. So if I made a change in \'93SystemConfiguration.properties\'94 it would not work, I need to actually change the code which defies the entire point of having a properties file. \
-I looked up how to actually read in a properties file into the Properties object directly and made the change!\
-\
-1.6\
-I realize now that my program can send individual notifications, but I still need to automate the whole process so that it can run on a server continuously as more notification requests/files are added to the queue to be processed. \
-I created a new file called AutomatedEmail Runner.java. I transferred most of the code from EmailRunner over but I put everything in an infinite loop so it runs continuously.\
-\
-1.7\
-This led to a lot of errors when I tried running the code. The solution was to add some more error handling and change the termination condition. I learned about how threads work and used the Thread class in the Java API to create a delay so the files would be processed in a batch every 5 seconds rather than continuously which would waste a lot of computing power. I learned how to design a queue and built the code in AutomatedEmailRunner to work like that.\
-\
-1.8\
-Lot of fine-tuning in terms of making the code more readable and testing out corner cases (like bad file names, bad file data, no files at all).\
-\
-2.0\
-Finished! Now to time to write more documentation for the project.}
+1.1
+Worked on the configuration files and learned why we needed them (similar to global variables, provides portability)
+Designed the method to create a Properties object in Java and set directoryPath, template1, template2, and template3 commands
+Found a bug where if the file only had 2/3 things that were necessary, the Scanner would try and keep reading and crash. Added if hasNextToken() to fix that bug.
+
+1.2
+Today, I worked on the JavaMail API. I had to learn how to download a jar file (mail.jar) and connect it to the Java Project in Eclipse (using external libraries). 
+I tested the API by sending a message to myself.
+Then I realized I verified the data, but what I needed to send to the user wasn’t that file’s raw data but a formatted message. So I made a class to do that formatting (creating an actual, readable email).
+Then, I created the class to send the email once the data has been verified and formatted into a message. I sent an email to show that this works.
+
+1.3
+I still need to clean up the code a little bit, my EmailRunner.java is too long. The if hasNextToken() statements don’t really look that neat, the methods like validate1() aren’t very modular (short).
+
+1.4
+Fixed a formatting issue in the Template files that made the email sent have random extra spaces
+Re-organized code from main with creating and setting the values of a property file into PropertyCreator.java
+Added code to create the email messages for Notification 2 and 3 in MessageCreator.java
+Tested sending emails for all three of the notifications, and it worked!
+
+1.5 
+I realized that my code only works because PropertyCreator build the property object, I’m not reading in the configuration file’s properties. So if I made a change in “SystemConfiguration.properties” it would not work, I need to actually change the code which defies the entire point of having a properties file. 
+I looked up how to actually read in a properties file into the Properties object directly and made the change!
+
+1.6
+I realize now that my program can send individual notifications, but I still need to automate the whole process so that it can run on a server continuously as more notification requests/files are added to the queue to be processed. 
+I created a new file called AutomatedEmail Runner.java. I transferred most of the code from EmailRunner over but I put everything in an infinite loop so it runs continuously.
+
+1.7
+This led to a lot of errors when I tried running the code. The solution was to add some more error handling and change the termination condition. I learned about how threads work and used the Thread class in the Java API to create a delay so the files would be processed in a batch every 5 seconds rather than continuously which would waste a lot of computing power. I learned how to design a queue and built the code in AutomatedEmailRunner to work like that.
+
+1.8
+Lot of fine-tuning in terms of making the code more readable and testing out corner cases (like bad file names, bad file data, no files at all).
+
+2.0
+Finished! Now to time to write more documentation for the project.
