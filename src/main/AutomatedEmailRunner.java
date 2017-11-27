@@ -11,6 +11,11 @@ public class AutomatedEmailRunner {
 	public static void main(String[] args) throws MessagingException, IOException, FileNotFoundException
 	{
 		/* Read the properties file for this system */
+		if(args.length != 1)
+		{
+			System.out.println("Enter a configuration file");
+			return;
+		}
 		
 		//The configuration file name is passed in as a command-line argument
 		Properties p = PropertiesCreator.readPropertyFile(args[0]);
@@ -91,10 +96,11 @@ public class AutomatedEmailRunner {
 						validData = tempValid.validate3();
 					}
 			
+					/* If file command is not recognized, don't do anything
 					else
 					{
 						System.out.println("Unrecognized command/file name");
-					}
+					}*/
 			
 					//Now that the data has been verified, we can send the message
 					if(!validData)
