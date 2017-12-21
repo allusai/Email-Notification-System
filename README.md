@@ -1,5 +1,5 @@
 # Email-Notification-System
-This is my project with Bala Lahari to design their backend email notification system for their classes. After integrating with the frontend team, we are able to send notifications to students for published grades, missing assignments, and event reminders with an easy interface for the teachers.
+This is my project with the company Bala Lahari to design their backend email notification system for their classes. After integrating with the frontend team, we are able to send notifications to students for published grades, missing assignments, and event reminders with an easy interface for the teachers.
 
 See my work log in the file "Log.txt"
 
